@@ -1,0 +1,19 @@
+{
+  "tasks": {
+    "build": "stellar contract build",
+    "optimize": "stellar contract optimize --wasm target/wasm32v1-none/release/basic_account.wasm",
+    "setup:basic": "deno run --allow-env --allow-net --allow-read --allow-write --allow-ffi typescript/setup-basic.ts",
+    "transfer:basic": "deno run --allow-env --allow-net --allow-read --allow-write --allow-ffi typescript/transfer-basic.ts"
+  },
+  "compilerOptions": {
+    "lib": ["deno.ns", "deno.window", "deno.worker"],
+    "strict": true
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "chalk": "npm:chalk@^5.6.2",
+    "stellar-sdk": "npm:@stellar/stellar-sdk@^14.3.3",
+    "@colibri/core": "jsr:@colibri/core@^0.11.2",
+    "buffer": "npm:buffer@^6.0.3"
+  }
+}
