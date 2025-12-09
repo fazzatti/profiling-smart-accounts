@@ -26,7 +26,13 @@ const temporary = LocalSigner.generateRandom();
 
 console.log("Initializing acounts...");
 
+await initializeWithFriendbot(
+  networkConfig.friendbotUrl,
+  accountSignerKeys.publicKey() as Ed25519PublicKey
+);
+console.log("Account Signer initialized: ", accountSignerKeys.publicKey());
 await initializeWithFriendbot(networkConfig.friendbotUrl, admin.publicKey());
+
 console.log("Admin initialized: ", admin.publicKey());
 
 await initializeWithFriendbot(

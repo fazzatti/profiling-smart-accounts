@@ -11,9 +11,11 @@
   },
   "nodeModulesDir": "auto",
   "imports": {
+    "@colibri/plugin-fee-bump": "jsr:@colibri/plugin-fee-bump@^0.5.0",
+    "@fifo/convee": "jsr:@fifo/convee@^0.10.0",
     "chalk": "npm:chalk@^5.6.2",
     "stellar-sdk": "npm:@stellar/stellar-sdk@^14.3.3",
-    "@colibri/core": "jsr:@colibri/core@^0.11.2",
+    "@colibri/core": "jsr:@colibri/core@^0.13.1",
     "buffer": "npm:buffer@^6.0.3"
   }
 }
